@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>First Submission PWA</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+  <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#e53935" />
+</head>
+
+<body>
+  <header>
+    <div class="navbar-fixed">
+      <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+          <a id="logo-container" href="#" class="brand-logo teal-text text-darken-4"><i
+              class="material-icons red-text text-darken-1">camera</i>LihPhoto</a>
+          <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+          <ul class="topnav right hide-on-med-and-down"></ul>
+        </div>
+      </nav>
+    </div>
+    <ul id="nav-mobile" class="sidenav"></ul>
+  </header>
+  <div class="parallax-container valign-wrapper scrollspy">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header s12 center teal-text text-accent-2 text-logo">Your photograph services solution</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="assets/background1.jpg"></div>
+  </div>
+
+  <div class="container scrollspy" id="whyus"></div>
+  <div class="parallax-container valign-wrapper scrollspy" id="portfolio"></div>
+  <div class="container scrollspy" id="contact"></div>
+  <footer class="page-footer teal darken-4 scrollspy" id="about"></footer>
+
+
+  <!--  Scripts-->
+  <script src="js/materialize.min.js"></script>
+  <script src="js/nav.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker
+          .register("/service-worker.js")
+          .then(function () {
+            console.log("SW : Registered");
+          })
+          .catch(function () {
+            console.log("SW: Register Failed");
+          })
+      })
+    } else {
+      console.log("SW: This browser didn't support SW");
+    }
+  </script>
+</body>
+
+</html>

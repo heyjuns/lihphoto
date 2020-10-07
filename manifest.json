@@ -1,0 +1,17 @@
+
+{
+    "name": "LihPhoto PWA",
+    "short_name": "Lih PWA",
+    "description": "Submission 1 PWA - Juanda Leonardo",
+    "theme_color": "#009688",
+    "background_color": "#b71c1c",
+    "display": "standalone",
+    "start_url": "/index.html",
+    "icons": [
+        {
+            "src": "assets/icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+  }
